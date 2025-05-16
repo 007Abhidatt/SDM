@@ -1,0 +1,238 @@
+Basic Script
+
+****To Print Greeting:-
+
+#!/bin/bash
+# A simple variable example
+greeting=Hello
+name=Tux
+echo $greeting $name
+
+****To calculate a arithmatic and show the result with decimal numbers:-
+
+echo "scale=3;54/3" | bc
+scale:- It'll be used to show how much decimal points we want to show
+bc:- (Bash Calculator) is a command line calculator that supports calculation up to a certain number of decimal points.
+
+****To perform addition:- 
+
+#!/bin/bash
+var=$((5+41))
+echo $var
+
+echo:- To call and show the value/message
+
+********Create Bash File with .sh*******
+touch BashFile.sh
+
+#!/bin/bash
+
+echo "Enter a numner"
+read a
+
+echo "Enter a numner"
+read b
+
+var=$((a+b))
+echo $var
+
+**********To Print Message from nano*****************
+open nano
+#!/bin/bash
+var_1="Saurav"
+var_2="Deshmukh"
+echo $var_1,$var_2
+
+on shell type./filename
+
+**********To Print Message from nano*****************
+open nano
+#!/bin/bash
+var_1="Saurav"
+var_2="Deshmukh"
+unset var_1
+echo $var_1,$var_2
+
+on shell type./filename
+
+unset will remove var_1 in output
+
+**********To Print Message from nano*****************
+open nano
+#!/bin/bash
+var_1="Saurav"
+var_2="Deshmukh"
+readonly var_1
+echo $var_1,$var_2
+
+on shell type./filename
+
+It will make the variable readonly and can not be changed
+
+===========================================================================================================================
+
+read x
+read y
+
+if [ $x -gt $y ]
+then
+echo X is greater than Y
+elif [ $x -lt $y ]
+then
+echo X is less than Y
+elif [ $x -eq $y ]
+then
+echo X is equal to Y
+fi
+
+====================================================================================================================
+
+#!/bin/bash
+read x
+read y
+
+if [ "$x" -gt "$y" ]
+then
+echo X is Greater than Y
+elif [ "$x" -lt "$y" ]
+then
+echo X is less than Y
+elif [ "$x" -eq "$y" ]
+then
+echo X is equal to Y
+elif [ "$x" -ne "$y" ]
+then
+echo X is not equal to Y
+
+fi
+
+====================================================================================================================
+cat abc.txt
+ls:-> Listing of created file
+
+pwd:-> Details about path of directory
+
+mkdir:-> Represents Directory
+
+mv filename1 filename2:-> Move File to another File
+
+cp filename1 filename2:-> Copy file to another file
+
+mkdir directory_name:-> Creation of the Directory
+
+chmod 755 abc.txt:-> Granting Permissions to a file
+
+cd\Suyash:-> Jumping to Directory
+
+whoami:-> Shows the User
+
+nano filename:-> Open the nano terminal to edit file
+
+touch filename:-> To create a new file
+
+ls -lrt:-> Show the details of the created files
+
+cat:-> Shows the file contents of mentioned filename
+
+=================================================================================================================
+
+grep :- global search for the regular expression
+
+the head command will output the first part of the file, while the tail command will print the last part of the file
+
+This message is shown once a day. To disable it please create the
+/home/ietuser/.hushlogin file.
+ietuser@DESKTOP-HDV7I5J:~$ ls -lrt
+total 0
+drwxr-xr-x 1 ietuser ietuser 512 Apr 21 06:50 cd
+-rw-r--r-- 1 ietuser ietuser   0 Apr 21 06:52 Dockerfile
+-rw-r--r-- 1 ietuser ietuser  20 Apr 21 07:04 Dockerfile.txt
+drwxr-xr-x 1 ietuser ietuser 512 Apr 21 07:06 Saurav
+drwxr-xr-x 1 ietuser ietuser 512 Apr 21 07:07 Tejas
+drwxr-xr-x 1 ietuser ietuser 512 Apr 22 08:13 Suyash
+ietuser@DESKTOP-HDV7I5J:~$ cd Suyash
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ touch grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep apple
+avacado
+
+
+^X^C
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep "apple" grep.sh
+apples and pears
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep -v "pears" grep.sh
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep -n "pears" grep.sh
+1:apples and pears
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n 2 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -c 2 grep.sh
+apietuser@DESKTOP-HDV7I5J:~/Suyash$ head -c 6 grep.sh
+applesietuser@DESKTOP-HDV7I5J:~/Suyash$ head -c 5 grep.sh
+appleietuser@DESKTOP-HDV7I5J:~/Suyash$ tail -n 4 grep.sh
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+
+=====================================================================================================================
+
+**** If we havent provided any number for line after head or tail then by default it'll show only 10 result.
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ls:-> Listing of created file
+
+pwd:-> Details about path of directory
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n grep.sh
+head: invalid number of lines: ‘grep.sh’
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n 5 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+
+*** Same for tail***********************************************
+
+=========================================================================================================================
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail grep.sh \n
+==> grep.sh <==
+
+whoami:-> Shows the User
+
+nano filename:-> Open the nano terminal to edit file
+
+touch filename:-> To create a new file
+
+ls -lrt:-> Show the details of the created files
+
+cat:-> Shows the file contents of mentioned filename
+tail: cannot open 'n' for reading: No such file or directory
+
+======================================================================================================================
+
+Name="Girish"
+case "$Name" in
+    #case 1
+    "Rajib") echo "Profession : Software Engineer" ;;
+    
+    #case 2
+    "Vikas") echo "Profession : Web Developer" ;;
+    
+    #case 3
+    "Girish") echo "Profession : Technical Content Writer" ;;
+esac

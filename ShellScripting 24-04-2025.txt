@@ -1,0 +1,839 @@
+Windows Subsystem for Linux is now available in the Microsoft Store!
+You can upgrade by running 'wsl.exe --update' or by visiting https://aka.ms/wslstorepage
+Installing WSL from the Microsoft Store will give you the latest WSL updates, faster.
+For more information please visit https://aka.ms/wslstoreinfo
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 4.4.0-19041-Microsoft x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Apr 24 06:36:18 UTC 2025
+
+  System load:    0.52      Processes:             8
+  Usage of /home: unknown   Users logged in:       0
+  Memory usage:   31%       IPv4 address for eth0: 192.168.10.131
+  Swap usage:     0%
+
+This message is shown once a day. To disable it please create the
+/home/ietuser/.hushlogin file.
+ietuser@DESKTOP-HDV7I5J:~$ ls -lrt
+total 0
+drwxr-xr-x 1 ietuser ietuser 512 Apr 21 06:50 cd
+-rw-r--r-- 1 ietuser ietuser   0 Apr 21 06:52 Dockerfile
+-rw-r--r-- 1 ietuser ietuser  20 Apr 21 07:04 Dockerfile.txt
+drwxr-xr-x 1 ietuser ietuser 512 Apr 21 07:06 Saurav
+drwxr-xr-x 1 ietuser ietuser 512 Apr 21 07:07 Tejas
+drwxr-xr-x 1 ietuser ietuser 512 Apr 22 08:13 Suyash
+ietuser@DESKTOP-HDV7I5J:~$ cd Suyash
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ touch grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep apple
+avacado
+
+
+^X^C
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep "apple" grep.sh
+apples and pears
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep -v "pears" grep.sh
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ grep -n "pears" grep.sh
+1:apples and pears
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n 2 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -c 2 grep.sh
+apietuser@DESKTOP-HDV7I5J:~/Suyash$ head -c 6 grep.sh
+applesietuser@DESKTOP-HDV7I5J:~/Suyash$ head -c 5 grep.sh
+appleietuser@DESKTOP-HDV7I5J:~/Suyash$ tail -n 4 grep.sh
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail +n 4 grep.sh
+tail: cannot open '+n' for reading: No such file or directory
+tail: cannot open '4' for reading: No such file or directory
+==> grep.sh <==
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail -n 4 grep.sh
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n 3 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head grep.sh -n
+head: option requires an argument -- 'n'
+Try 'head --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ls:-> Listing of created file
+
+pwd:-> Details about path of directory
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n grep.sh
+head: invalid number of lines: ‘grep.sh’
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ head -n 5 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail grep.sh
+
+whoami:-> Shows the User
+
+nano filename:-> Open the nano terminal to edit file
+
+touch filename:-> To create a new file
+
+ls -lrt:-> Show the details of the created files
+
+cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail grep.sh \n
+==> grep.sh <==
+
+whoami:-> Shows the User
+
+nano filename:-> Open the nano terminal to edit file
+
+touch filename:-> To create a new file
+
+ls -lrt:-> Show the details of the created files
+
+cat:-> Shows the file contents of mentioned filename
+tail: cannot open 'n' for reading: No such file or directory
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail grep.sh
+
+whoami:-> Shows the User
+
+nano filename:-> Open the nano terminal to edit file
+
+touch filename:-> To create a new file
+
+ls -lrt:-> Show the details of the created files
+
+cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ tail grep.sh \
+> n
+==> grep.sh <==
+
+whoami:-> Shows the User
+
+nano filename:-> Open the nano terminal to edit file
+
+touch filename:-> To create a new file
+
+ls -lrt:-> Show the details of the created files
+
+cat:-> Shows the file contents of mentioned filename
+tail: cannot open 'n' for reading: No such file or directory
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort grep.sh
+
+
+
+
+
+
+
+
+
+
+
+
+apples and pears
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+
+cat:-> Shows the file contents of mentioned filename
+
+cd\Suyash:-> Jumping to Directory
+
+chmod 755 abc.txt:-> Granting Permissions to a file
+
+citrus – oranges, grapefruits, mandarins and limes
+
+cp filename1 filename2:-> Copy file to another file
+
+ls -lrt:-> Show the details of the created files
+
+ls:-> Listing of created file
+
+melons – watermelons, rockmelons and honeydew melons
+
+mkdir directory_name:-> Creation of the Directory
+
+mkdir:-> Represents Directory
+
+mv filename1 filename2:-> Move File to another File
+
+nano filename:-> Open the nano terminal to edit file
+
+pwd:-> Details about path of directory
+
+stone fruit – nectarines, apricots, peaches and plums
+tomatoes and avocados.
+
+touch filename:-> To create a new file
+
+tropical and exotic – bananas and mangoes
+whoami:-> Shows the User
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff grep.sh abc.txt
+
+1,7d0
+< apples and pears
+< citrus – oranges, grapefruits, mandarins and limes
+< stone fruit – nectarines, apricots, peaches and plums
+< tropical and exotic – bananas and mangoes
+< berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+< melons – watermelons, rockmelons and honeydew melons
+< tomatoes and avocados.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ revsort grep.sh
+revsort: command not found
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ reverse sort grep.sh
+reverse: command not found
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ reversesort grep.sh
+reversesort: command not found
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort 6 grep.sh
+sort: cannot read: 6: No such file or directory
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort abc.txt grep.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+apples and pears
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+cat:-> Shows the file contents of mentioned filename
+cat:-> Shows the file contents of mentioned filename
+cd\Suyash:-> Jumping to Directory
+cd\Suyash:-> Jumping to Directory
+chmod 755 abc.txt:-> Granting Permissions to a file
+chmod 755 abc.txt:-> Granting Permissions to a file
+citrus – oranges, grapefruits, mandarins and limes
+cp filename1 filename2:-> Copy file to another file
+cp filename1 filename2:-> Copy file to another file
+ls -lrt:-> Show the details of the created files
+ls -lrt:-> Show the details of the created files
+ls:-> Listing of created file
+ls:-> Listing of created file
+melons – watermelons, rockmelons and honeydew melons
+mkdir directory_name:-> Creation of the Directory
+mkdir directory_name:-> Creation of the Directory
+mkdir:-> Represents Directory
+mkdir:-> Represents Directory
+mv filename1 filename2:-> Move File to another File
+mv filename1 filename2:-> Move File to another File
+nano filename:-> Open the nano terminal to edit file
+nano filename:-> Open the nano terminal to edit file
+pwd:-> Details about path of directory
+pwd:-> Details about path of directory
+stone fruit – nectarines, apricots, peaches and plums
+tomatoes and avocados.
+touch filename:-> To create a new file
+touch filename:-> To create a new file
+tropical and exotic – bananas and mangoes
+whoami:-> Shows the User
+whoami:-> Shows the User
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort abc.txt grep.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+apples and pears
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+cat:-> Shows the file contents of mentioned filename
+cd\Suyash:-> Jumping to Directory
+chmod 755 abc.txt:-> Granting Permissions to a file
+citrus – oranges, grapefruits, mandarins and limes
+cp filename1 filename2:-> Copy file to another file
+ls -lrt:-> Show the details of the created files
+ls:-> Listing of created file
+ls:-> Listing of created file
+melons – watermelons, rockmelons and honeydew melons
+mkdir directory_name:-> Creation of the Directory
+mkdir:-> Represents Directory
+mkdir:-> Represents Directory
+mv filename1 filename2:-> Move File to another File
+nano filename:-> Open the nano terminal to edit file
+pwd:-> Details about path of directory
+pwd:-> Details about path of directory
+stone fruit – nectarines, apricots, peaches and plums
+tomatoes and avocados.
+touch filename:-> To create a new file
+tropical and exotic – bananas and mangoes
+whoami:-> Shows the User
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff grep.sh abc.txt
+1,7d0
+< apples and pears
+< citrus – oranges, grapefruits, mandarins and limes
+< stone fruit – nectarines, apricots, peaches and plums
+< tropical and exotic – bananas and mangoes
+< berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+< melons – watermelons, rockmelons and honeydew melons
+< tomatoes and avocados.
+13a7,25
+> mv filename1 filename2:-> Move File to another File
+>
+> cp filename1 filename2:-> Copy file to another file
+>
+> mkdir directory_name:-> Creation of the Directory
+>
+> chmod 755 abc.txt:-> Granting Permissions to a file
+>
+> cd\Suyash:-> Jumping to Directory
+>
+> whoami:-> Shows the User
+>
+> nano filename:-> Open the nano terminal to edit file
+>
+> touch filename:-> To create a new file
+>
+> ls -lrt:-> Show the details of the created files
+>
+> cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut grep.sh
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -n 2 grep.sh
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -2 grep.sh
+cut: invalid option -- '2'
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -n 2 abc.txt
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort -r grep.sh
+tropical and exotic – bananas and mangoes
+tomatoes and avocados.
+stone fruit – nectarines, apricots, peaches and plums
+pwd:-> Details about path of directory
+mkdir:-> Represents Directory
+melons – watermelons, rockmelons and honeydew melons
+ls:-> Listing of created file
+citrus – oranges, grapefruits, mandarins and limes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+apples and pears
+
+
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano grep.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -c 1- grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ls:-> Listing of created file
+
+pwd:-> Details about path of directory
+
+mkdir:-> Represents Directory
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -c 1-5 grep.sh
+apple
+citru
+stone
+tropi
+berri
+melon
+tomat
+ls:->
+
+pwd:-
+
+mkdir
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -c 2,5,8 grep.sh
+pea
+iu
+ter
+ril
+ei
+en
+ots
+s>i
+
+w-D
+
+kr>
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -c grep.sh abc.txt
+*** grep.sh     2025-04-24 06:56:33.788439000 +0000
+--- abc.txt     2025-04-21 07:57:13.601604900 +0000
+***************
+*** 1,13 ****
+- apples and pears
+- citrus – oranges, grapefruits, mandarins and limes
+- stone fruit – nectarines, apricots, peaches and plums
+- tropical and exotic – bananas and mangoes
+- berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+- melons – watermelons, rockmelons and honeydew melons
+- tomatoes and avocados.
+  ls:-> Listing of created file
+
+  pwd:-> Details about path of directory
+
+  mkdir:-> Represents Directory
+
+--- 1,25 ----
+  ls:-> Listing of created file
+
+  pwd:-> Details about path of directory
+
+  mkdir:-> Represents Directory
+
++ mv filename1 filename2:-> Move File to another File
++
++ cp filename1 filename2:-> Copy file to another file
++
++ mkdir directory_name:-> Creation of the Directory
++
++ chmod 755 abc.txt:-> Granting Permissions to a file
++
++ cd\Suyash:-> Jumping to Directory
++
++ whoami:-> Shows the User
++
++ nano filename:-> Open the nano terminal to edit file
++
++ touch filename:-> To create a new file
++
++ ls -lrt:-> Show the details of the created files
++
++ cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -u grep.sh abc.txt
+--- grep.sh     2025-04-24 06:56:33.788439000 +0000
++++ abc.txt     2025-04-21 07:57:13.601604900 +0000
+@@ -1,13 +1,25 @@
+-apples and pears
+-citrus – oranges, grapefruits, mandarins and limes
+-stone fruit – nectarines, apricots, peaches and plums
+-tropical and exotic – bananas and mangoes
+-berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+-melons – watermelons, rockmelons and honeydew melons
+-tomatoes and avocados.
+ ls:-> Listing of created file
+
+ pwd:-> Details about path of directory
+
+ mkdir:-> Represents Directory
+
++mv filename1 filename2:-> Move File to another File
++
++cp filename1 filename2:-> Copy file to another file
++
++mkdir directory_name:-> Creation of the Directory
++
++chmod 755 abc.txt:-> Granting Permissions to a file
++
++cd\Suyash:-> Jumping to Directory
++
++whoami:-> Shows the User
++
++nano filename:-> Open the nano terminal to edit file
++
++touch filename:-> To create a new file
++
++ls -lrt:-> Show the details of the created files
++
++cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -i grep.sh abc.txt
+1,7d0
+< apples and pears
+< citrus – oranges, grapefruits, mandarins and limes
+< stone fruit – nectarines, apricots, peaches and plums
+< tropical and exotic – bananas and mangoes
+< berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+< melons – watermelons, rockmelons and honeydew melons
+< tomatoes and avocados.
+13a7,25
+> mv filename1 filename2:-> Move File to another File
+>
+> cp filename1 filename2:-> Copy file to another file
+>
+> mkdir directory_name:-> Creation of the Directory
+>
+> chmod 755 abc.txt:-> Granting Permissions to a file
+>
+> cd\Suyash:-> Jumping to Directory
+>
+> whoami:-> Shows the User
+>
+> nano filename:-> Open the nano terminal to edit file
+>
+> touch filename:-> To create a new file
+>
+> ls -lrt:-> Show the details of the created files
+>
+> cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -l grep.sh abc.txt
+
+
+2025-04-24 07:08             diff -l grep.sh abc.txt              Page 1
+
+
+1,7d0
+< apples and pears
+< citrus – oranges, grapefruits, mandarins and limes
+< stone fruit – nectarines, apricots, peaches and plums
+< tropical and exotic – bananas and mangoes
+< berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+< melons – watermelons, rockmelons and honeydew melons
+< tomatoes and avocados.
+13a7,25
+> mv filename1 filename2:-> Move File to another File
+>
+> cp filename1 filename2:-> Copy file to another file
+>
+> mkdir directory_name:-> Creation of the Directory
+>
+> chmod 755 abc.txt:-> Granting Permissions to a file
+>
+> cd\Suyash:-> Jumping to Directory
+>
+> whoami:-> Shows the User
+>
+> nano filename:-> Open the nano terminal to edit file
+>
+> touch filename:-> To create a new file
+>
+> ls -lrt:-> Show the details of the created files
+>
+> cat:-> Shows the file contents of mentioned filename
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -s / --report-identical-files grep.sh abc.txt
+diff: extra operand 'abc.txt'
+diff: Try 'diff --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -s / --report-identical-files
+diff: missing operand after '/'
+diff: Try 'diff --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -s grep.sh abc.txt
+1,7d0
+< apples and pears
+< citrus – oranges, grapefruits, mandarins and limes
+< stone fruit – nectarines, apricots, peaches and plums
+< tropical and exotic – bananas and mangoes
+< berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+< melons – watermelons, rockmelons and honeydew melons
+< tomatoes and avocados.
+13a7,25
+> mv filename1 filename2:-> Move File to another File
+>
+> cp filename1 filename2:-> Copy file to another file
+>
+> mkdir directory_name:-> Creation of the Directory
+>
+> chmod 755 abc.txt:-> Granting Permissions to a file
+>
+> cd\Suyash:-> Jumping to Directory
+>
+> whoami:-> Shows the User
+>
+> nano filename:-> Open the nano terminal to edit file
+>
+> touch filename:-> To create a new file
+>
+> ls -lrt:-> Show the details of the created files
+>
+> cat:-> Shows the file contents of mentioned filename
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -R grep.sh abc.txt
+diff: invalid option -- 'R'
+diff: Try 'diff --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut grep.sh
+cut: you must specify a list of bytes, characters, or fields
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -c grep.sh
+cut: invalid byte/character position ‘grep.sh’
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -c 1-10 grep.sh
+apples and
+citrus –
+stone frui
+tropical a
+berries
+melons –
+tomatoes a
+ls:-> List
+
+pwd:-> Det
+
+mkdir:-> R
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -s grep.sh
+diff: missing operand after 'grep.sh'
+diff: Try 'diff --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ diff -l grep.sh
+diff: missing operand after 'grep.sh'
+diff: Try 'diff --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort -r abc.txt
+whoami:-> Shows the User
+touch filename:-> To create a new file
+pwd:-> Details about path of directory
+nano filename:-> Open the nano terminal to edit file
+mv filename1 filename2:-> Move File to another File
+mkdir:-> Represents Directory
+mkdir directory_name:-> Creation of the Directory
+ls:-> Listing of created file
+ls -lrt:-> Show the details of the created files
+cp filename1 filename2:-> Copy file to another file
+chmod 755 abc.txt:-> Granting Permissions to a file
+cd\Suyash:-> Jumping to Directory
+cat:-> Shows the file contents of mentioned filename
+
+
+
+
+
+
+
+
+
+
+
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ sort -R abc.txt
+cd\Suyash:-> Jumping to Directory
+mv filename1 filename2:-> Move File to another File
+touch filename:-> To create a new file
+whoami:-> Shows the User
+ls -lrt:-> Show the details of the created files
+nano filename:-> Open the nano terminal to edit file
+cat:-> Shows the file contents of mentioned filename
+ls:-> Listing of created file
+mkdir directory_name:-> Creation of the Directory
+mkdir:-> Represents Directory
+pwd:-> Details about path of directory
+cp filename1 filename2:-> Copy file to another file
+chmod 755 abc.txt:-> Granting Permissions to a file
+
+
+
+
+
+
+
+
+
+
+
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -c 1 grep.sh
+a
+c
+s
+t
+b
+m
+t
+l
+
+p
+
+m
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -b grep.sh
+cut: invalid byte/character position ‘grep.sh’
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -b 1 grep.sh
+a
+c
+s
+t
+b
+m
+t
+l
+
+p
+
+m
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -f grep.sh
+cut: invalid field value ‘grep.sh’
+Try 'cut --help' for more information.
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -f 1 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ls:-> Listing of created file
+
+pwd:-> Details about path of directory
+
+mkdir:-> Represents Directory
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ cut -f 1,2 grep.sh
+apples and pears
+citrus – oranges, grapefruits, mandarins and limes
+stone fruit – nectarines, apricots, peaches and plums
+tropical and exotic – bananas and mangoes
+berries – strawBERRIES, raspberries, blueberries, kiwifruit and passionfruit
+melons – watermelons, rockmelons and honeydew melons
+tomatoes and avocados.
+ls:-> Listing of created file
+
+pwd:-> Details about path of directory
+
+mkdir:-> Represents Directory
+
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ touch case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./case.sh
+-bash: ./case.sh: Permission denied
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ chmod 777 case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./case.sh
+./case.sh: line 8: syntax error near unexpected token `3'
+./case.sh: line 8: `case 3 '
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./case.sh
+Profession: Software Tester
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano case.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./case.sh
+Saurav
+Profession: Software Tester
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./case.sh
+Ganesh
+Profession: Application Developer
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ touch operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+-bash: ./operator.sh: Permission denied
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ chmod 777 operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Same String
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Gaurav
+Same String
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Suyash
+Same String
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Ganesh
+Not Same String
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Gaurav
+Not Same String
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Not Same
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Not Null
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ nano operator.sh
+ietuser@DESKTOP-HDV7I5J:~/Suyash$ ./operator.sh
+Not Null
+ietuser@DESKTOP-HDV7I5J:~/Suyash$

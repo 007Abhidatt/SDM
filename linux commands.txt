@@ -1,0 +1,21 @@
+touch file_name    //create new file name
+chmod xxx filename    //chnage permission
+ls  //list files in directory
+ls- lrd   //show file permission and all details 
+whoami      //show user 
+pwd   //ckeck path
+cd path   //change path
+cd...      //return to root path 
+nano file_name     //open editor
+mkdir    //create new directory
+rmdir    //delete directory
+mv    // rename file
+cp    //copy file..
+ls- lrt    // check permission
+
+head // display first 10 lines of files
+tail // display last 10 lines of file
+grap 
+
+sort // sort file lines
+cut // it cut portion of each line of file and showas result
